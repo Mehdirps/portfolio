@@ -1,0 +1,69 @@
+.loader {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/img/illustration-paysage.jpg');
+    background-position: center;
+    background-size: cover;
+
+    .container {
+        p {
+            width: max-content;
+            margin: auto;
+            font-family: $pokemonGB;
+            color: black;
+            margin-bottom: 50px;
+
+        }
+
+        .icons-container {
+            position: relative;
+            display: flex;
+            gap: 20px;
+            width: 150px;
+            height: 70px;
+
+            figure {
+                width: 50px;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                bottom: 0;
+                animation: icon 1s linear;
+
+                @keyframes icon {
+                    0% {
+                        bottom: 0;
+                    }
+
+                    50% {
+                        top: 0;
+                    }
+
+                    100% {
+                        bottom: 0;
+                    }
+                }
+
+                &:nth-child(1) {
+                    left: 0;
+                }
+
+                &:nth-child(2) {
+                    left: 50%;
+                    animation-delay:.5s;
+                }
+                
+                &:nth-child(3) {
+                    left: 100%;
+                    animation-delay: 1s;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}
