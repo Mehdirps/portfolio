@@ -48,36 +48,6 @@
          offset="1"
          id="stop4165" />
     </linearGradient>
-    <meshgradient
-       inkscape:collect="always"
-       id="meshgradient4761"
-       gradientUnits="userSpaceOnUse"
-       x="63.54155"
-       y="73.635643"
-       gradientTransform="translate(-2.0463494e-6,-0.31552415)">
-      <meshrow
-         id="meshrow4763">
-        <meshpatch
-           id="meshpatch4765">
-          <stop
-             path="c 91.1091,0  182.218,0  273.327,0"
-             style="stop-color:#ffffff;stop-opacity:1"
-             id="stop4767" />
-          <stop
-             path="c 0,9.70829  0,19.4166  0,29.1249"
-             style="stop-color:#efce00;stop-opacity:1"
-             id="stop4769" />
-          <stop
-             path="c -91.1091,0  -182.218,0  -273.327,0"
-             style="stop-color:#ffffff;stop-opacity:1"
-             id="stop4771" />
-          <stop
-             path="c 0,-9.70829  0,-19.4166  0,-29.1249"
-             style="stop-color:#efce00;stop-opacity:1"
-             id="stop4773" />
-        </meshpatch>
-      </meshrow>
-    </meshgradient>
   </defs>
   <g
      inkscape:label="Calque 1"
@@ -104,13 +74,13 @@
        transform="scale(0.26458333)" />
     <text
        xml:space="preserve"
-       style="font-size:21.1667px;line-height:1.25;font-family:'Script MT Bold';-inkscape-font-specification:'Script MT Bold, ';letter-spacing:0px;mix-blend-mode:lighten;fill:url(#meshgradient4761);fill-opacity:1;stroke:#8c5208;stroke-width:1.465;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-size:21.1667px;line-height:1.25;font-family:'Script MT Bold';-inkscape-font-specification:'Script MT Bold, ';letter-spacing:0px;mix-blend-mode:lighten;fill:#efce00;fill-opacity:1;stroke:#8c5208;stroke-width:1.465;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="63.965298"
        y="93.473961"
        id="text1245"><tspan
          sodipodi:role="line"
          id="tspan1243"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.1667px;font-family:'Pokemon Solid';-inkscape-font-specification:'Pokemon Solid';fill:url(#meshgradient4761);fill-opacity:1;stroke:#8c5208;stroke-width:1.465;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.1667px;font-family:'Pokemon Solid';-inkscape-font-specification:'Pokemon Solid';fill:#efce00;fill-opacity:1;stroke:#8c5208;stroke-width:1.465;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="63.965298"
          y="93.473961">Développeur Web et Mobile</tspan></text>
   </g>
