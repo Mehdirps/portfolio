@@ -10,10 +10,10 @@ const Welcome = () => {
             <div className="container">
                 <div className="container-img">
                     <figure className="title">
-                        <img src="./img/title.svg" alt="" />
+                        <img src="./img/title.svg" alt="Illustration du titre du site" />
                     </figure>
                     <figure className="logo">
-                        <img src="./img/Logo.svg" alt="" />
+                        <img src="./img/Logo.svg" alt="Logo du site" />
                     </figure>
                 </div>
                 <div className="next">

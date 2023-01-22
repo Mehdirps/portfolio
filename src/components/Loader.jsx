@@ -8,13 +8,13 @@ const Loader = (props) => {
                 <p>Chargement</p>
                 <div className="icons-container">
                     <figure>
-                        <img src={`./img/icons/pokemons/${props.pokemonOne}`} alt="" />
+                        <img src={`./img/icons/pokemons/${props.pokemonOne}`} alt={`Illustration du pokemon ${props.pokemonOne.split('.')[0]}`} />
                     </figure>
                     <figure>
-                        <img src={`./img/icons/pokemons/${props.pokemonTwo}`} alt="" />
+                        <img src={`./img/icons/pokemons/${props.pokemonTwo}`} alt={`Illustration du pokemon ${props.pokemonTwo.split('.')[0]}`} />
                     </figure>
                     <figure>
-                        <img src={`./img/icons/pokemons/${props.pokemonThree}`} alt="" />
+                        <img src={`./img/icons/pokemons/${props.pokemonThree}`} alt={`Illustration du pokemon ${props.pokemonThree.split('.')[0]}`} />
                     </figure>
                 </div>
             </div>
