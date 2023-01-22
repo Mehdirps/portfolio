@@ -7,6 +7,12 @@
     background-size: cover;
 
     .container {
+
+        @media screen and (min-width: 499px) {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
         p {
             width: max-content;
             margin: auto;
@@ -14,14 +20,21 @@
             color: black;
             margin-bottom: 50px;
 
+            @media screen and (min-width: 999px) {
+                font-size: 1.5rem;
+            }
+
         }
 
         .icons-container {
             position: relative;
-            display: flex;
-            gap: 20px;
             width: 150px;
             height: 70px;
+
+            @media screen and (min-width: 999px) {
+                width: 200px;
+                height: 100px;
+            }
 
             figure {
                 width: 50px;
@@ -29,6 +42,10 @@
                 transform: translate(-50%, -50%);
                 bottom: 0;
                 animation: icon 1s linear;
+
+                @media screen and (min-width: 999px) {
+                    width: 70px;
+                }
 
                 @keyframes icon {
                     0% {
