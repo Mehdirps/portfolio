@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
+import { NavLink } from 'react-router-dom';
 
 const Welcome = () => {
     document.oncontextmenu = function () {
@@ -17,7 +18,9 @@ const Welcome = () => {
                     </figure>
                 </div>
                 <div className="next">
-                    <p>Appuyer pour continuer</p>
+                    <NavLink exact="true" to='/presentation'>
+                        <p>Appuyer pour continuer</p>
+                    </NavLink>
                 </div>
                 <div className="copyright">
                     <Icon icon="material-symbols:copyright-outline" />
