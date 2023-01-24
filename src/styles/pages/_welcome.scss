@@ -6,9 +6,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // background-image: url('../../assets/img/fond2.png');
-    background-position: center;
-    background-size: cover;
 
     .container {
         display: flex;
@@ -20,12 +17,15 @@
             .title {
                 width: 200px;
                 margin: auto;
+
                 @media screen and (min-width:500px) {
                     width: 300px;
                 }
+
                 @media screen and (min-width:1000px) {
                     width: 500px;
                 }
+
                 @media screen and (min-width:1500px) {
                     width: 700px;
                 }
@@ -38,12 +38,15 @@
             .logo {
                 width: 50px;
                 margin: auto;
+
                 @media screen and (min-width:500px) {
                     width: 70px;
                 }
+
                 @media screen and (min-width:1000px) {
                     width: 100px;
                 }
+
                 @media screen and (min-width:1500px) {
                     width: 130px;
                 }
@@ -74,15 +77,24 @@
         }
 
         .next {
-            p {
-                width: max-content;
-                margin: auto;
-                font-size: .7rem;
-                animation: opacity infinite 2s ease-in-out;
-                cursor: pointer;
+            a {
+                color: black;
+                text-decoration: none;
 
-                @media screen and (min-width: 500px) {
-                    font-size: 1rem ;
+                &:visited {
+                    color: black;
+                }
+
+                p {
+                    width: max-content;
+                    margin: auto;
+                    font-size: .7rem;
+                    animation: opacity infinite 2s ease-in-out;
+                    cursor: pointer;
+
+                    @media screen and (min-width: 500px) {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
@@ -92,8 +104,9 @@
             margin: auto;
             display: flex;
             font-size: .6rem;
+
             @media screen and (min-width: 500px) {
-                font-size: .8rem ;
+                font-size: .8rem;
             }
         }
     }
@@ -102,7 +115,6 @@
     .background2 {
         background-image: url('../../assets/img/welcome-background.png');
         background-position: center;
-        background-size: cover;
         position: absolute;
         top: 0;
         bottom: 0;
@@ -126,6 +138,7 @@
         0% {
             right: 0;
         }
+
         100% {
             right: 100%;
         }
