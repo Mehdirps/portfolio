@@ -7,12 +7,6 @@ const Welcome = () => {
     return (
         <>
             <section className='welcome-page'>
-                <div className="music">
-                    <Icon icon="material-symbols:music-video" className='icon'/>
-                    <audio controls loop>
-                        <source src="./music/pokemon-1.mp3" />
-                    </audio>
-                </div>
                 <div className="container">
                     <div className="container-img">
                         <figure className="title">

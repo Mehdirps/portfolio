@@ -6,6 +6,7 @@
 
 // Components
 @import './components/loader';
+@import './components/navbar';
 
 
 .music {
@@ -17,6 +18,7 @@
     align-items: center;
     background-color: #1a1a1b;
     border-radius: 5px;
+    z-index: 10;
 
     .icon {
         font-size: 50px;
