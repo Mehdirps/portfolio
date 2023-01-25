@@ -1,0 +1,49 @@
+.music-container {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+   
+    .music,
+    .music2 {
+        width: 100px;
+        height: 70px;
+        border-radius: 5px;
+        background-color: #1a1a1b;
+        padding-top: 10px;
+
+        p {
+            color: white;
+            font-family: $pokemonGB;
+            font-size: .6rem;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+
+            .icon {
+                font-size: 50px;
+                background-color: transparent;
+                color: #1a1a1b;
+
+                path {
+                    color: white;
+                }
+            }
+
+            audio {
+                width: 50px;
+            }
+        }
+    }
+
+    .music2 {
+        left: 120px;
+    }
+}   

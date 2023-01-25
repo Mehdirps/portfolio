@@ -7,30 +7,4 @@
 // Components
 @import './components/loader';
 @import './components/navbar';
-
-
-.music {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    background-color: #1a1a1b;
-    border-radius: 5px;
-    z-index: 10;
-
-    .icon {
-        font-size: 50px;
-        background-color: transparent;
-        color: #1a1a1b;
-
-        path {
-            color: white;
-        }
-    }
-
-    audio {
-        width: 50px;
-    }
-}
+@import './components/musicPlayer';
