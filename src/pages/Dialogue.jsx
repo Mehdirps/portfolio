@@ -7,9 +7,11 @@ const Dialogue = () => {
     const navigate = useNavigate();
 
     const dialogueMessage = [
-        "  Bonjour ! Je m’appelle Mehdi Raposo. Je suis Développeur FullStack Web Et Mobile. J’ai un titre professionnel RNCP Designer Web - bac +2 et je suis actuellement en formation Concepteur Développeur d’applications - bac +3.",
-        " Dans le cadre de ma formation en alternance, je recherche actuellement une entreprise dans le domaine du développement web ou mobile dans l’Yonne, l’Ile-de-France ou en 100% télétravail.",
-        " J’ai des compétences en HTML, CSS, JavaScript et aussi en PHP."
+        "  Bonjour ! Je m’appelle Mehdi Raposo Développeur FullStack Web Et Mobile, passionné d'informatique depuis petit, en 2021 j'ai effectuer un titre professionnel RNCP bac +2 Designer Web qui m'a appris les bases du développement web en HTML - CSS - Javascript et PHP.",
+        " Suite à ma formation Designer Web, j'ai continuer mon apprentissage dans le domaine en commençant une formation de Concepteur Développeur d’applications - bac +3 en alternance chez Online Campus.",
+        " Dans le cadre de ma formation en alternance, je recherche actuellement une entreprise dans le domaine du développement web ou mobile dans l’Yonne, l’Ile-de-France ou en 100% télétravail pour poursuivre mon apprentissage.",
+        " J'ai pour objectif de formation de créer une application de type forum pour discuter sur ses séries et films favoris. Je développe cette application avec une stack MERN - MongoDB, Express, React.js et Node.js",
+        " Si vous souhaitez en apprendre plus sur moi, mes compétences ou mes réalisations, je vous invite à cliquez sur le bouton ci-dessous pour suivre mon aventure !"
     ]
     // TODO Ajouter toutes les phrases nécéssaires
     const NextMessage = () => {
