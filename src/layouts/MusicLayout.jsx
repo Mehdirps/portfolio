@@ -1,5 +1,4 @@
 import React from 'react';
-import { Icon } from '@iconify/react';
 import { Outlet } from 'react-router-dom';
 
 const MusicLayout = () => {
@@ -10,7 +9,6 @@ const MusicLayout = () => {
                 <div className="music">
                     <p>Musique 1</p>
                     <div className="container">
-                        <Icon icon="material-symbols:music-video" className='icon' />
                         <audio controls loop>
                             <source src="./music/pokemon-1.mp3" />
                         </audio>
@@ -19,7 +17,6 @@ const MusicLayout = () => {
                 <div className="music2">
                     <p>Musique 2</p>
                     <div className="container">
-                        <Icon icon="material-symbols:music-video" className='icon' />
                         <audio controls loop>
                             <source src="./music/pokemon-2.mp3" />
                         </audio>

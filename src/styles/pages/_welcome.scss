@@ -15,19 +15,19 @@
         .container-img {
 
             .title {
-                width: 200px;
+                width: 250px;
                 margin: auto;
 
                 @media screen and (min-width:500px) {
-                    width: 300px;
+                    width: 350px;
                 }
 
                 @media screen and (min-width:1000px) {
-                    width: 500px;
+                    width: 550px;
                 }
 
                 @media screen and (min-width:1500px) {
-                    width: 700px;
+                    width: 750px;
                 }
 
                 img {
@@ -36,19 +36,19 @@
             }
 
             .logo {
-                width: 50px;
+                width: 70px;
                 margin: auto;
 
                 @media screen and (min-width:500px) {
-                    width: 70px;
+                    width: 90px;
                 }
 
                 @media screen and (min-width:1000px) {
-                    width: 100px;
+                    width: 110px;
                 }
 
                 @media screen and (min-width:1500px) {
-                    width: 130px;
+                    width: 140px;
                 }
 
                 img {
