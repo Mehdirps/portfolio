@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import DialogueMessage from '../components/DialogueMessage';
-import Loader from '../components/Loader';
 
 const Dialogue = () => {
     const [index, setIndex] = useState(0)
@@ -23,7 +22,6 @@ const Dialogue = () => {
     }
     return (
         <>
-            <Loader />
             <section className='dialogue'>
                 <section className="container">
                     <figure className='personnage'>

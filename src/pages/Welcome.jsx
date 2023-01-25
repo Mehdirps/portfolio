@@ -1,7 +1,6 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import { NavLink } from 'react-router-dom';
-import Loader from '../components/Loader';
 
 const Welcome = () => {
     document.oncontextmenu = function () {
@@ -9,7 +8,6 @@ const Welcome = () => {
     }
     return (
         <>
-            <Loader />
             <section className='welcome-page'>
                 <div className="container">
                     <div className="container-img">
