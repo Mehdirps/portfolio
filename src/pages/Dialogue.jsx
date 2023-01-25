@@ -17,7 +17,7 @@ const Dialogue = () => {
     const NextMessage = () => {
         const increment = index + 1;
         if (increment === dialogueMessage.length) {
-            navigate('/test')
+            navigate('/accueil')
             return
         }
         setIndex(increment)
