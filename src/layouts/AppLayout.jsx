@@ -41,7 +41,7 @@ const AppLayout = () => {
     ], [])
 
     const navigate = useNavigate();
-// TODO Voir pourquoi obliger mettre un truc comme ça
+    // TODO Voir pourquoi obliger mettre un truc comme ça
     useEffect(() => {
         setLoader(true)
         const pokemonOneIndex = Math.floor(Math.random() * pokemonListOne.length);
@@ -67,9 +67,9 @@ const AppLayout = () => {
     return loader ? (
         <Loader pokemonOne={pokemonOne} pokemonTwo={pokemonTwo} pokemonThree={pokemonThree} background={loaderBackground} />
     ) : (
-        <div>
+        <>
             <Outlet />
-        </div>
+        </>
     );
 };
 
