@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import Loader from '../components/Loader';
 
-const IndexLayout = () => {
+const AppLayout = () => {
     const [loader, setLoader] = useState(true);
     const [pokemonOne, setPokemonOne] = useState('');
     const [pokemonTwo, setPokemonTwo] = useState('');
@@ -73,4 +73,4 @@ const IndexLayout = () => {
     );
 };
 
-export default IndexLayout;
+export default AppLayout;
