@@ -63,7 +63,7 @@ const AppLayout = () => {
         setTimeout(() => {
             setLoader(false);
         }, 1700);
-    }, [navigate])
+    }, [loaderBackgroundList, navigate, pokemonListOne, pokemonListThree, pokemonListTwo])
     return loader ? (
         <Loader pokemonOne={pokemonOne} pokemonTwo={pokemonTwo} pokemonThree={pokemonThree} background={loaderBackground} />
     ) : (
