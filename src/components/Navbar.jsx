@@ -15,7 +15,7 @@ const Navbar = () => {
                         <figure className='pokeball'>
                             <img src="./img/icons/pokeball.png" alt="Icon Pokéball" />
                         </figure>
-                        <p>Skills Team</p>
+                        <p>Skills</p>
                     </li>
                     <li>
                         <figure className='dresseur'>
