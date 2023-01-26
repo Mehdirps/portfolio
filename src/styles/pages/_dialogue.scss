@@ -41,10 +41,25 @@
                 border-radius: 10px;
                 background-color: white;
 
+                @keyframes opacity {
+                    0% {
+                        opacity: 1;
+                    }
+
+                    50% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
+
                 .next {
                     position: absolute;
                     bottom: 0;
                     right: 5px;
+                    animation: opacity linear infinite 1s;
                 }
             }
         }
