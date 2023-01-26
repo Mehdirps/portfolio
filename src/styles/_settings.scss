@@ -13,9 +13,12 @@
     src: url('../assets/fonts/Pokemon\ Solid.ttf');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 $pokemonSolid: 'Pokemon Solid';
 $pokemonGB: 'Pokemon GB';
 $pocketMonk: 'Pocket Monk';
+$roboto: 'Roboto', sans-serif;
 
 *{
     padding: 0;
