@@ -1,0 +1,75 @@
+.navbar {
+    width: 90%;
+    max-width: 400px;
+    margin: 100px auto;
+    min-height: 10vh;
+    max-height: 15vh;
+    background: linear-gradient(90deg, rgba(185, 211, 224, 1) 0%, rgba(255, 255, 255, 1) 9%, rgba(255, 255, 255, 1) 91%, rgba(185, 211, 224, 1) 100%);
+    border: solid 2px black;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width:1099px) {
+        margin-top: 10px;
+    }
+
+    ul {
+        width: 85%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+
+        li {
+            cursor: pointer;
+            // width: 40px;
+            // height: 40px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .pokedex {
+                background-color: #F37C34;
+            }
+
+            .pokeball {
+                background-color: #D26D6C;
+            }
+
+            .dresseur {
+                background-color: #F4D249;
+            }
+
+            .cv {
+                background-color: #75C86B;
+            }
+
+            figure {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                
+                img {
+                    width: 25px;
+                    height: 25px;
+                    // transform: rotate(-30deg);
+                }
+            }
+
+            p {
+                display: none;
+                text-align: center;
+
+                @media screen and (min-width:499px) {
+                    display: initial;
+                }
+            }
+        }
+    }
+}
