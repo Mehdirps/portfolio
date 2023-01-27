@@ -1,10 +1,18 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
 import SortRealisations from './SortRealisations';
-import { useSelector } from 'react-redux';
 import { portfolioData } from '../../data/portfolioData';
+import { useDispatch, useSelector } from 'react-redux';
+import { setReadex } from '../../stores/ReadexSlice';
+
 
 const ReadexHeader = () => {
+    const dispatch = useDispatch();
+
+    const closeReadex = () => {
+        dispatch(setReadex(false))
+    }
+
     const length = useSelector((state) => state.length.value)
     return (
         <div className="readex-header">
@@ -13,7 +21,7 @@ const ReadexHeader = () => {
                 <figure className='icon'>
                     <img src="./img/icons/pokedex.png" alt="Icon Pokédex" />
                 </figure>
-                <Icon icon="material-symbols:close-rounded" className='close' />
+                <Icon icon="material-symbols:close-rounded" className='close' onClick={closeReadex} />
             </div>
             <div className="bottom">
                 <div className="list-length">

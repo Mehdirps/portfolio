@@ -1,13 +1,26 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setReadex } from '../stores/ReadexSlice';
 
 const Navbar = () => {
+    const readex = useSelector((state) => state.readex.value)
+    const dispatch = useDispatch();
+
+    const openReadex = () => {
+        if (readex === true) {
+            dispatch(setReadex(false))
+            return;
+        }
+        dispatch(setReadex(true))
+    }
+
     return (
         <section className='header'>
             <nav className='navbar'>
                 <ul>
                     <li>
                         <figure className='pokedex'>
-                            <img src="./img/icons/pokedex.png" alt="Icon Pokédex" />
+                            <img src="./img/icons/pokedex.png" alt="Icon Pokédex" onClick={openReadex} />
                         </figure>
                         <p>Réadex</p>
                     </li>
