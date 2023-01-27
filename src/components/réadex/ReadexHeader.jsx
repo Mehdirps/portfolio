@@ -2,6 +2,7 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 import SortRealisations from './SortRealisations';
 import { useSelector } from 'react-redux';
+import { portfolioData } from '../../data/portfolioData';
 
 const ReadexHeader = () => {
     const length = useSelector((state) => state.length.value)
@@ -19,7 +20,7 @@ const ReadexHeader = () => {
                     <figure>
                         <img src="./img/icons/pokeball.png" alt="Icon Pokéball" />
                     </figure>
-                    <p>{length}</p>
+                    <p>{length} sur {portfolioData.length}</p>
                 </div>
                 <div className="sort">
                     <Icon icon="material-symbols:sort" className='sort-icon' />

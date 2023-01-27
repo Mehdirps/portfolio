@@ -6,8 +6,10 @@ import { setLength } from '../../stores/ArrayLengthSlice';
 
 const RéalisationsList = () => {
     const language = useSelector((state) => state.language.value)
+    const length = useSelector((state) => state.length.value)
     const realisationArray = [];
     const dispatch = useDispatch();
+    const emptyRealisation = [];
 
     useEffect(() => {
         portfolioData.map((realisation) =>
@@ -18,7 +20,15 @@ const RéalisationsList = () => {
                 : ''
         )
         dispatch(setLength(realisationArray.length));
+
     }, [dispatch, language, realisationArray])
+
+    if (realisationArray.length < 11) {
+        const noRealisation = portfolioData.length - length;
+        for (let i = 0; i < noRealisation; i++) {
+            emptyRealisation.push(<div className="empty-realisation" key={i}><p></p></div>)
+        }
+    }
     return (
         <section className='realisations-list'>
             <div className="container">
@@ -39,6 +49,7 @@ const RéalisationsList = () => {
                             : ''
                     )
                 }
+                {emptyRealisation}
             </div>
         </section>
     );
