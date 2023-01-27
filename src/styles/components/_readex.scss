@@ -61,10 +61,28 @@
             border-radius: 50px 50px 0 0;
             border-bottom: 2px solid #ba9804;
 
+            
             .close {
                 cursor: pointer;
                 margin: auto;
                 font-size: 1.5rem;
+                @media screen and (min-width: 1000px) {
+                  font-size: 2rem;
+                }
+            }
+
+            @media screen and (min-width: 1000px) {
+                p{
+                    font-size: 1.5rem;
+                }
+
+                figure{
+                    width: 35px;
+                    height: 35px;
+                }
+                .close {
+                    font-size: 2rem;
+                }
             }
 
         }
