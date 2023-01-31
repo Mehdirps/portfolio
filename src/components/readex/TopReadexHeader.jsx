@@ -1,0 +1,26 @@
+import React from 'react';
+import { Icon } from '@iconify/react';
+import { useDispatch } from 'react-redux';
+import { setReadex, setOpenDetails, setShowRealisation } from '../../stores/ReadexSlice';
+
+
+const TopReadexHeader = () => {
+    const dispatch = useDispatch();
+
+    const closeReadex = () => {
+        dispatch(setReadex(false));
+        dispatch(setOpenDetails(false));
+        dispatch(setShowRealisation(false));
+    }
+    return (
+        <div className="top">
+            <p>Readex</p>
+            <figure className='icon'>
+                <img src="./img/icons/pokedex.png" alt="Icon Pokédex" />
+            </figure>
+            <Icon icon="material-symbols:close-rounded" className='close' onClick={closeReadex} />
+        </div>
+    );
+};
+
+export default TopReadexHeader;
