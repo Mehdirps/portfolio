@@ -15,10 +15,10 @@ const Navbar = () => {
     }
 
     return (
-        <section className='header'>
+        <header className='header'>
             <nav className='navbar'>
                 <ul>
-                    <li  onClick={openReadex}>
+                    <li onClick={openReadex}>
                         <figure className='pokedex'>
                             <img src="./img/icons/pokedex.png" alt="Icon Pokédex" />
                         </figure>
@@ -44,7 +44,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </nav>
-        </section>
+        </header>
     );
 };
 
