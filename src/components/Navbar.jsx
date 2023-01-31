@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setReadex } from '../stores/ReadexSlice';
+import { setReadex, setShowRealisation } from '../stores/ReadexSlice';
 
 const Navbar = () => {
     const readex = useSelector((state) => state.readex.openReadex)
@@ -9,9 +9,11 @@ const Navbar = () => {
     const openReadex = () => {
         if (readex === true) {
             dispatch(setReadex(false))
+            dispatch(setShowRealisation(false))
             return;
         }
         dispatch(setReadex(true))
+        dispatch(setShowRealisation(true))
     }
 
     return (
