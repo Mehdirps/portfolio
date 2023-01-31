@@ -13,24 +13,27 @@
         width: 80%;
     }
 
+    @keyframes open {
+        0% {
+            transform: scale(0);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
     .readex-header {
         height: 15vh;
         width: 100%;
         display: flex;
         flex-direction: column;
-
-        @keyframes open {
-            0% {
-                transform: scale(0);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        .top,
+        
         .bottom {
+            display: flex;
+            justify-content: space-between;
+            background-color: #1d293c;
+            color: white;
             width: 100%;
             height: 7.5vh;
             display: grid;
@@ -38,61 +41,21 @@
             justify-content: center;
             align-items: center;
             padding: 5px 5px;
-
+    
             figure {
                 width: 30px;
                 height: 30px;
                 margin: auto;
-
+    
                 img {
                     width: 100%;
                     height: 100%;
                 }
             }
-
+    
             p {
                 text-align: center;
             }
-        }
-
-        .top {
-            background-color: white;
-            border-radius: 50px 50px 0 0;
-            border-bottom: 2px solid #ba9804;
-
-
-            .close {
-                cursor: pointer;
-                margin: auto;
-                font-size: 1.5rem;
-
-                @media screen and (min-width: 1000px) {
-                    font-size: 2rem;
-                }
-            }
-
-            @media screen and (min-width: 1000px) {
-                p {
-                    font-size: 1.5rem;
-                }
-
-                figure {
-                    width: 35px;
-                    height: 35px;
-                }
-
-                .close {
-                    font-size: 2rem;
-                }
-            }
-
-        }
-
-        .bottom {
-            display: flex;
-            justify-content: space-between;
-            background-color: #1d293c;
-            color: white;
 
             .list-length {
                 display: flex;
@@ -128,102 +91,4 @@
         }
     }
 
-    .realisations-list {
-        background-image: url('../../assets/img/background-readex.jpg');
-        background-position: center;
-        background-size: cover;
-        padding-top: 10px;
-
-        .container {
-            height: 50vh;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            overflow: scroll;
-
-            .realisation {
-                flex: 0 0 auto;
-                height: 45vh;
-                width: 70px;
-                margin-top: 5vh;
-                background-color: #bab798;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                box-shadow: #1d293c60 5px 5px;
-                color: black;
-                border-radius: 5px;
-                border-left: solid white 2px;
-                border-top: solid white 2px;
-                border-bottom: solid rgba(0, 0, 0, 0.451) 2px;
-                border-right: solid rgba(0, 0, 0, 0.451) 2px;
-                cursor: pointer;
-                transition: all .5s;
-
-                &:hover{
-                    margin-top: 0;
-                }
-
-                &:first-child {
-                    margin-left: 20px;
-                }
-
-                &:last-child {
-                    margin-right: 10px;
-                }
-
-                .icons {
-                    width: 100%;
-                    height: 10vh;
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    justify-content: center;
-                    align-items: center;
-                    border-bottom: 5px solid #ccf334;
-
-                    i {
-                        font-size: 3vh;
-                        margin: auto;
-                    }
-                }
-
-                .name {
-                    height: 30vh;
-                    text-align: center;
-                    writing-mode: vertical-lr;
-                }
-
-                .id {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-top: 5px solid #ccf334;
-                    width: 100%;
-                    height: 10vh;
-                }
-            }
-
-            .empty-realisation {
-                height: 55vh;
-                width: 70px;
-                border: white 2px solid;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: rgba(0, 0, 0, 0.158);
-
-                p {
-                    height: 100%;
-                    width: 70px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    writing-mode: vertical-lr;
-                    color: white;
-                }
-            }
-        }
-
-    }
 }
