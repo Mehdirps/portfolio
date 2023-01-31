@@ -18,9 +18,9 @@ const Navbar = () => {
         <section className='header'>
             <nav className='navbar'>
                 <ul>
-                    <li>
+                    <li  onClick={openReadex}>
                         <figure className='pokedex'>
-                            <img src="./img/icons/pokedex.png" alt="Icon Pokédex" onClick={openReadex} />
+                            <img src="./img/icons/pokedex.png" alt="Icon Pokédex" />
                         </figure>
                         <p>Réadex</p>
                     </li>
