@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setReadex } from '../stores/ReadexSlice';
 
 const Navbar = () => {
-    const readex = useSelector((state) => state.readex.value)
+    const readex = useSelector((state) => state.readex.openReadex)
     const dispatch = useDispatch();
 
     const openReadex = () => {
