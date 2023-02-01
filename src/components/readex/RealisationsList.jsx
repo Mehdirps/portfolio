@@ -32,8 +32,8 @@ const RéalisationsList = () => {
         }
     }
 
-    const showRealisationDetails = (item) => {
-        dispatch(setRealisation(item));
+    const showRealisationDetails = (id) => {
+        dispatch(setRealisation(id));
         dispatch(setOpenDetails(true));
         dispatch(setShowRealisation(false));
     }
@@ -43,7 +43,7 @@ const RéalisationsList = () => {
                 {
                     portfolioData.map((realisation, id) =>
                         realisation.languages.includes(language) ?
-                            <div className="realisation" key={id} onClick={() => showRealisationDetails(realisation)}>
+                            <div className="realisation" key={id} onClick={() => showRealisationDetails(realisation.id)}>
                                 <div className="icons">
                                     {
                                         realisation.languagesIcons.map((icon, id) =>
