@@ -3,10 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 const ReadexSlice = createSlice({
     name: 'readex',
     initialState: {
-        openReadex: false,
-        showRealisations: false,
-        realisation: {},
-        openDetails: false,
+        openReadex: true,
+        showRealisations: true,
+        realisation: '',
+        openDetails: true,
     },
     reducers: {
         setReadex: (state, action) => {
