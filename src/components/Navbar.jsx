@@ -1,19 +1,25 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setReadex, setShowRealisation } from '../stores/ReadexSlice';
+import { setDisplay } from '../stores/BallSlice';
 
 const Navbar = () => {
     const readex = useSelector((state) => state.readex.openReadex)
     const dispatch = useDispatch();
 
     const openReadex = () => {
-        if (readex === true) {
-            dispatch(setReadex(false))
-            dispatch(setShowRealisation(false))
-            return;
-        }
-        dispatch(setReadex(true))
-        dispatch(setShowRealisation(true))
+        dispatch(setDisplay('ball'))
+
+        setTimeout(() => {
+            if (readex === true) {
+                dispatch(setReadex(false))
+                dispatch(setShowRealisation(false))
+                return;
+            }
+            dispatch(setDisplay('ball-of'))
+            dispatch(setReadex(true))
+            dispatch(setShowRealisation(true))
+        }, 1000)
     }
 
     return (

@@ -56,18 +56,6 @@
     <g
        id="g829"
        inkscape:label="ball">
-      <circle
-         style="fill:#ffffff;stroke:#575757;stroke-width:6.939;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
-         id="path850"
-         cx="303.43652"
-         cy="149.18144"
-         r="35.092422" />
-      <circle
-         style="fill:#ffffff;stroke:#575757;stroke-width:3.89647;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
-         id="path850-5"
-         cx="303.43652"
-         cy="149.18144"
-         r="19.705521" />
     </g>
   </g>
 </svg>
