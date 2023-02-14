@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setOpenDetails, setShowRealisation } from '../../stores/ReadexSlice';
 import { Icon } from '@iconify/react';
@@ -7,40 +7,69 @@ import { portfolioData } from '../../data/portfolioData';
 const RealisationDetails = () => {
     const realisation = useSelector((state) => state.readex.realisation)
     const dispatch = useDispatch();
-    const index = realisation - 1;
-    
+    const [realisationIndex, setRealisationIndex] = useState(realisation - 1);
+    // const index = ;
+
     const returnList = () => {
         dispatch(setOpenDetails(false));
         dispatch(setShowRealisation(true));
     }
+
+    const next = () => {
+        if (realisationIndex === portfolioData.length - 1) {
+            return;
+        }
+        const index = realisationIndex + 1;
+        setRealisationIndex(index);
+    }
+    const previous = () => {
+        if (realisationIndex === 0) {
+            return;
+        }
+        const index = realisationIndex - 1;
+        setRealisationIndex(index);
+    }
     return (
-        <section className="realisation">
+        <section className="realisation-container">
             <div className="return">
                 <p onClick={returnList}><Icon icon="material-symbols:arrow-circle-left-outline" />Retour</p>
                 {
-                    portfolioData[index].source ?
-                        <a className="link" href={portfolioData[index].source} target='_blank' rel="noreferrer">
+                    portfolioData[realisationIndex].source ?
+                        <a className="link" href={portfolioData[realisationIndex].source} target='_blank' rel="noreferrer">
                             <Icon icon="mdi:github" />
                             Code source
                         </a>
                         : ''
                 }
             </div>
+            <div className="next-prev">
+                <p onClick={previous}><Icon icon="material-symbols:arrow-right-alt-rounded" className='icon' hFlip={true} />Précédent</p>
+                <p onClick={next}>Suivant<Icon icon="material-symbols:arrow-right-alt-rounded" className='icon' /></p>
+
+
+            </div>
             <section className="container">
                 <div className="infos">
-                    <p>n°{portfolioData[index].id}</p>
-                    <h2>{portfolioData[index].name}</h2>
-                    <p>{portfolioData[index].realisationDuration}</p>
+                    <p>n°{portfolioData[realisationIndex].id}</p>
+                    <h2>{portfolioData[realisationIndex].name}</h2>
+                    <p>Temps de réalisation: {portfolioData[realisationIndex].realisationDuration}</p>
                     <div className="languages">
                         {
-                            portfolioData[index].languages.filter(language => language !== 'tout').map((language, id) =>
+                            portfolioData[realisationIndex].languages.filter(language => language !== 'tout').map((language, id) =>
                                 <p key={id}>{language}</p>
+                            )
+                        }
+                    </div>
+                    <div className="languages-icons">
+                        {
+                            portfolioData[realisationIndex].languagesIcons.map((icon, id) =>
+                                <i className={icon} key={id}></i>
                             )
                         }
                     </div>
                 </div>
                 <div className="other-infos">
-                    <p className="description"><img src={portfolioData[index].picture} alt="" />{portfolioData[index].info}</p>
+                    <p className="description"><img src={portfolioData[realisationIndex].picture} alt="" />{portfolioData[realisationIndex].info}</p>
                 </div>
             </section>
         </section>

@@ -8,14 +8,18 @@ const Navbar = () => {
     const dispatch = useDispatch();
 
     const openReadex = () => {
-        dispatch(setDisplay('ball'))
+
+        if (readex === false) {
+            dispatch(setDisplay('ball'))
+        }
+
+        if (readex === true) {
+            dispatch(setReadex(false))
+            dispatch(setShowRealisation(false))
+            return;
+        }
 
         setTimeout(() => {
-            if (readex === true) {
-                dispatch(setReadex(false))
-                dispatch(setShowRealisation(false))
-                return;
-            }
             dispatch(setDisplay('ball-of'))
             dispatch(setReadex(true))
             dispatch(setShowRealisation(true))
