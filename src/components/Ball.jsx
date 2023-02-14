@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 const Ball = () => {
     const display = useSelector((state) => state.ball.display)
-    
+
     return (
         <svg
             width="50mm"
@@ -31,14 +31,14 @@ const Ball = () => {
                     id="path850"
                     cx="300"
                     cy="149.18144"
-                    r="200"
+                    r={display === 'ball' ? '250' : '200'}
                     className='circle' />
                 <circle
                     style={{ fill: "#ffffff", stroke: display === 'ball' ? "url(#gradient)" : '#575757', strokeWidth: 20.89647 }}
                     id="path850-5"
                     cx="300"
                     cy="149.18144"
-                    r="100"
+                    r={display === 'ball' ? '130' : '100'}
                     className='button' />
             </g>
         </svg>
