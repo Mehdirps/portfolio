@@ -39,7 +39,13 @@ const RealisationDetails = () => {
                             <Icon icon="mdi:github" />
                             Code source
                         </a>
-                        : ''
+                        : portfolioData[realisationIndex].link ?
+                            <a className="link" href={portfolioData[realisationIndex].link} target='_blank' rel="noreferrer">
+                                <Icon icon="dashicons:admin-site-alt" />
+                                Lien vers le site
+                            </a>
+                            : ''
+
                 }
             </div>
             <div className="next-prev">
