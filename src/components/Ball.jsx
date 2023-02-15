@@ -31,14 +31,14 @@ const Ball = () => {
                     id="path850"
                     cx="300"
                     cy="149.18144"
-                    r={display === 'ball' ? '250' : '200'}
+                    r={'200'}
                     className='circle' />
                 <circle
                     style={{ fill: "#ffffff", stroke: display === 'ball' ? "url(#gradient)" : '#575757', strokeWidth: 20.89647 }}
                     id="path850-5"
                     cx="300"
                     cy="149.18144"
-                    r={display === 'ball' ? '130' : '100'}
+                    r={'100'}
                     className='button' />
             </g>
         </svg>
