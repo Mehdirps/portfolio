@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const BallSlice = createSlice({
     name: 'display',
     initialState: {
-        display: ''
+        display: 'ball-off'
     },
     reducers: {
         setDisplay: (state, action) => {

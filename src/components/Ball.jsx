@@ -10,7 +10,7 @@ const Ball = () => {
             height="50mm"
             viewBox="0 0 600 297"
             id="svg5"
-            className={display ? display : 'ball-off'}>
+            className={display}>
             <g
                 id="g829">
                 <defs>

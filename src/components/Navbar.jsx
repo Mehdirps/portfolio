@@ -20,7 +20,7 @@ const Navbar = () => {
         }
 
         setTimeout(() => {
-            dispatch(setDisplay('ball-of'))
+            dispatch(setDisplay('ball-off'))
             dispatch(setReadex(true))
             dispatch(setShowRealisation(true))
         }, 1000)
