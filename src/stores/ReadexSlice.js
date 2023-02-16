@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const ReadexSlice = createSlice({
     name: 'readex',
     initialState: {
-        openReadex: true,
+        openReadex: false,
         showRealisations: true,
         realisation: '',
         openDetails: true,
