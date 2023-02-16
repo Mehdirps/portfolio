@@ -4,29 +4,28 @@
     border-bottom: 2px solid #ba9804;
     width: 100%;
     height: 7.5vh;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: right;
     align-items: center;
     padding: 5px 20px;
     font-family: $roboto;
 
-    p{
-        width: max-content;
+    p {
+        width: 100%;
+        text-align: left !important;
     }
+
     figure {
         width: 30px;
         height: 30px;
+        margin: auto;
 
         img {
             width: 100%;
             height: 100%;
         }
     }
-
-    p {
-        text-align: center;
-    }
-
 
     .close {
         cursor: pointer;
@@ -39,16 +38,16 @@
 
     @media screen and (min-width: 1000px) {
         p {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
 
         figure {
-            width: 35px;
-            height: 35px;
+            width: 30px;
+            height: 30px;
         }
 
         .close {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
     }
 
