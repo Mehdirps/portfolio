@@ -49,10 +49,16 @@ const RealisationDetails = () => {
                 }
             </div>
             <div className="next-prev">
-                <p onClick={previous}><Icon icon="material-symbols:arrow-right-alt-rounded" className='icon' hFlip={true} />Précédent</p>
-                <p onClick={next}>Suivant<Icon icon="material-symbols:arrow-right-alt-rounded" className='icon' /></p>
-
-
+                {
+                    realisationIndex > 0 ?
+                        <p onClick={previous}><Icon icon="material-symbols:arrow-right-alt-rounded" className='icon' hFlip={true} />Précédent</p>
+                        : <p></p>
+                }
+                {
+                    realisationIndex !== portfolioData.length - 1 ?
+                        <p onClick={next}>Suivant<Icon icon="material-symbols:arrow-right-alt-rounded" className='icon' /></p>
+                        : <p></p>
+                }
             </div>
             <section className="container">
                 <div className="infos">
@@ -62,14 +68,7 @@ const RealisationDetails = () => {
                     <div className="languages">
                         {
                             portfolioData[realisationIndex].languages.filter(language => language !== 'tout').map((language, id) =>
-                                <p key={id}>{language}</p>
-                            )
-                        }
-                    </div>
-                    <div className="languages-icons">
-                        {
-                            portfolioData[realisationIndex].languagesIcons.map((icon, id) =>
-                                <i className={icon} key={id}></i>
+                                <p key={id} id={language.split('.')[0]}>{language}</p>
                             )
                         }
                     </div>
