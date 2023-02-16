@@ -1,10 +1,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setReadex, setShowRealisation } from '../stores/ReadexSlice';
+import { setDevCard } from '../stores/DevCardSlice';
 import { setDisplay } from '../stores/BallSlice';
 
 const Navbar = () => {
     const readex = useSelector((state) => state.readex.openReadex)
+    const devCard = useSelector((state) => state.devCard.openDevCard);
     const dispatch = useDispatch();
 
     const openReadex = () => {
@@ -18,14 +20,33 @@ const Navbar = () => {
             dispatch(setShowRealisation(false))
             return;
         }
-
+        if (devCard === true) {
+            dispatch(setDevCard(false))
+        }
         setTimeout(() => {
             dispatch(setDisplay('ball-off'))
             dispatch(setReadex(true))
             dispatch(setShowRealisation(true))
         }, 1000)
     }
+    const openDevCard = () => {
 
+        if (devCard === false) {
+            dispatch(setDisplay('ball'))
+        }
+        if (devCard === true) {
+            dispatch(setDevCard(false))
+            return;
+        }
+        if (readex === true) {
+            dispatch(setReadex(false))
+        }
+
+        setTimeout(() => {
+            dispatch(setDisplay('ball-off'))
+            dispatch(setDevCard(true))
+        }, 1000)
+    }
     return (
         <header className='header'>
             <nav className='navbar'>
@@ -42,7 +63,7 @@ const Navbar = () => {
                         </figure>
                         <p>Skills</p>
                     </li>
-                    <li>
+                    <li onClick={openDevCard}>
                         <figure className='dresseur'>
                             <img src="./img/icons/dresseur.png" alt="Icon avatar" />
                         </figure>
