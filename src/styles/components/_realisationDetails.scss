@@ -1,5 +1,7 @@
-.realisation {
+.realisation-container {
     border-bottom: 3px solid #f3d73f;
+    background: rgb(24, 70, 129);
+    background: linear-gradient(180deg, rgba(24, 70, 129, 1) 0%, rgba(34, 121, 158, 1) 48%);
 
     .return {
         width: 100%;
@@ -25,14 +27,31 @@
         }
     }
 
+    .next-prev {
+        width: 100%;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+        }
+    }
+
     .container {
-        background: rgb(24, 70, 129);
-        background: linear-gradient(180deg, rgba(24, 70, 129, 1) 0%, rgba(34, 121, 158, 1) 48%);
         color: white;
         padding: 10px;
         display: flex;
         flex-direction: column;
         gap: 20px;
+        max-width: 900px;
+        margin: auto;
 
         .infos {
             display: flex;
@@ -45,19 +64,58 @@
 
                 p {
                     text-transform: uppercase;
-                    font-size: .8rem;
+                    font-size: .65rem;
+                }
 
-                    &::after {
-                        content: ' -';
-                        width: 5px;
-                        height: 5px;
-                    }
+                #javascript,
+                #css,
+                #sass,
+                #php,
+                #node,
+                #react,
+                #vue,
+                #wordpress,
+                #symfony {
+                    padding: 5px;
+                    border-radius: 10px;
+                    color: white;
+                }
 
-                    &:last-of-type {
-                        &::after {
-                            content: '';
-                        }
-                    }
+                #javascript {
+                    background-color: #ead41c;
+                    color: black;
+                }
+
+                #css {
+                    background-color: #2760e5;
+                }
+
+                #sass {
+                    background-color: #c36192;
+                }
+
+                #php {
+                    background-color: #7175aa;
+                }
+
+                #node {
+                    background-color: #7bc326;
+                }
+
+                #react {
+                    background-color: #5ccfee;
+                }
+
+                #vue {
+                    background-color: #3eaf7c;
+                }
+
+                #wordpress {
+                    background-color: #2f3439;
+                }
+
+                #symfony {
+                    background-color: #000000;
                 }
             }
         }
@@ -68,28 +126,20 @@
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
+                max-width: 550px;
 
                 @media screen and (min-width:499px) {
                     display: block;
                 }
 
-                @media screen and (min-width: 1199px) {
-                    width: 80%;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                }
-
                 img {
+                    box-shadow: #172d48 5px 5px;
+
                     @media screen and (min-width:499px) {
-                        width: 300px;
+                        height: 150px;
                         margin: 0 10px 0 0;
-                        float: left;
+                        float: right;
 
-                    }
-
-                    @media screen and (min-width: 799px) {
-                        width: 500px;
                     }
 
                     &:before,
