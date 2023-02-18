@@ -135,9 +135,9 @@
             .post,
             .phone,
             .email {
-                width: 250px;
-                max-width: 300px;
-                margin: auto;
+                width: 100%;
+                max-width: 350px;
+                margin: 0 auto 5px;
                 display: flex;
                 justify-content: space-between;
                 background-color: rgba(255, 255, 255, 0.51);
