@@ -2,6 +2,7 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 import { useDispatch } from 'react-redux';
 import { setReadex, setOpenDetails, setShowRealisation } from '../../stores/ReadexSlice';
+import { setLanguage } from '../../stores/LanguageSlice';
 
 
 const TopReadexHeader = () => {
@@ -11,6 +12,7 @@ const TopReadexHeader = () => {
         dispatch(setReadex(false));
         dispatch(setOpenDetails(false));
         dispatch(setShowRealisation(false));
+        dispatch(setLanguage('tout'))
     }
     return (
         <div className="top">

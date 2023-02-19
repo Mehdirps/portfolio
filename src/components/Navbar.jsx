@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setReadex, setShowRealisation } from '../stores/ReadexSlice';
 import { setDevCard } from '../stores/DevCardSlice';
 import { setDisplay } from '../stores/BallSlice';
+import { setLanguage } from '../stores/LanguageSlice';
 
 const Navbar = () => {
     const readex = useSelector((state) => state.readex.openReadex)
@@ -18,6 +19,7 @@ const Navbar = () => {
         if (readex === true) {
             dispatch(setReadex(false))
             dispatch(setShowRealisation(false))
+            dispatch(setLanguage('tout'))
             return;
         }
         if (devCard === true) {
@@ -40,6 +42,7 @@ const Navbar = () => {
         }
         if (readex === true) {
             dispatch(setReadex(false))
+            dispatch(setLanguage('tout'))
         }
 
         setTimeout(() => {
