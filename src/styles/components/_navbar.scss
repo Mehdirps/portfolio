@@ -1,68 +1,55 @@
-.header {
-    height: 15vh;
+header {
     position: absolute;
-    width: 100%;
-    z-index: 2;
+    transform: translate(-50%, 0);
+    top: 10px;
+    left: 50%;
+    z-index: 10;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background-color: #193444dd;
+    border-radius: 10px;
+    color: white;
+    padding: 20px 20px 10px 20px;
+    font-family: $roboto;
+
+    .title{
+        width: 100%;
+        padding-bottom: 3px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.655);
+    }
+
     .navbar {
-        height: 12vh;
-        width: 90%;
-        max-width: 400px;
-        margin: 10px auto 10px;
-        background: linear-gradient(90deg, rgba(185, 211, 224, 1) 0%, rgba(255, 255, 255, 1) 9%, rgba(255, 255, 255, 1) 91%, rgba(185, 211, 224, 1) 100%);
-        border: solid 2px black;
-        border-radius: 7px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
+        transition: .5s linear;
+        overflow: hidden;
         ul {
-            width: 85%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
 
-            li {
-                cursor: pointer;
-                margin: auto;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
+        li {
+            display: flex;
+            gap: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            transition: .3s linear;
 
-                .pokedex {
-                    background-color: #F37C34;
-                }
+            &:hover{
+                background-color: #eabd06;
+                color: black;
+            }
 
-                .pokeball {
-                    background-color: #D26D6C;
-                }
+            figure {
+                width: 20px;
+                height: 20px;
 
-                .dresseur {
-                    background-color: #F4D249;
-                }
+                img {
+                    width: 100%;
+                    height: 100%;
 
-                .cv {
-                    background-color: #75C86B;
-                }
-
-                figure {
-                    width: 40px;
-                    height: 40px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 5px;
-
-                    img {
-                        width: 25px;
-                        height: 25px;
-                        // transform: rotate(-30deg);
-                    }
-                }
-
-                p {
-                    text-align: center;
-                    font-family: $roboto;
                 }
             }
         }
