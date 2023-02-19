@@ -1,7 +1,7 @@
 .readex {
     width: 90%;
     max-width: 1000px;
-    padding-bottom: 7.5vh;
+    padding-bottom: 3vh;
     background-color: white;
     border-radius: 50px;
     font-family: $roboto;
@@ -9,6 +9,8 @@
     border-top: unset;
     animation: open linear .5s;
     z-index: 5;
+    overflow: hidden;
+    margin-top: 80px;
 
     @keyframes open {
         0% {
