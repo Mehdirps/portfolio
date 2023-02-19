@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import Avatar from './devCard/Avatar';
 import Infos from './devCard/Infos';
-import Title from './devCard/Header';
+import Title from './devCard/DevCardHeader';
 
 const DevCard = () => {
     const devCard = useSelector((state) => state.devCard.openDevCard);
