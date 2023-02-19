@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setReadex, setShowRealisation } from '../stores/ReadexSlice';
 import { setDevCard } from '../stores/DevCardSlice';
@@ -9,6 +9,7 @@ const Navbar = () => {
     const readex = useSelector((state) => state.readex.openReadex)
     const devCard = useSelector((state) => state.devCard.openDevCard);
     const dispatch = useDispatch();
+    const [height, setHeight] = useState(false);
 
     const openReadex = () => {
 
@@ -50,10 +51,25 @@ const Navbar = () => {
             dispatch(setDevCard(true))
         }, 1000)
     }
+
+    const openMenu = () => {
+        if (height === true) {
+            setHeight(false);
+            return;
+        }
+        setHeight(true);
+    }
+    useEffect(() => {
+        if (devCard || readex) {
+            setHeight(false);
+            return;
+        }
+    }, [devCard, readex])
     return (
         <header className='header'>
-            <nav className='navbar'>
-                <ul>
+            <p className='title' onClick={openMenu}>Menu principal</p>
+            <nav className='navbar' style={{ height: height ? '135px' : '0' }}>
+                <ul >
                     <li onClick={openReadex}>
                         <figure className='pokedex'>
                             <img src="./img/icons/pokedex.png" alt="Icon Pokédex" />
