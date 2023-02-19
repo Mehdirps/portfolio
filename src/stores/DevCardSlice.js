@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const DevCardSlice = createSlice({
     name: 'devCard',
     initialState: {
-        openDevCard: true,
+        openDevCard: false,
     },
     reducers: {
         setDevCard: (state, action) => {
