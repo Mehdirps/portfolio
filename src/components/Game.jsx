@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import GameHero from '../components/game/GameHero';
 import HeroChoice from './game/HeroChoice';
 import { useSelector, useDispatch } from 'react-redux';
@@ -12,7 +12,11 @@ const Game = () => {
     const hero = useSelector((state) => state.hero.hero)
     const openChoice = useSelector((state) => state.hero.open)
     const dispatch = useDispatch();
-
+    const [windowWidth, setWindowWidth] = useState('');
+    
+    useEffect(() => {
+        setWindowWidth(window.innerWidth)
+    }, [windowWidth])
 
     function handleKeyDown(event) {
         if (event.key === 'ArrowLeft') {
@@ -34,19 +38,25 @@ const Game = () => {
     }
 
     return (
-        <section className='game' onKeyDown={handleKeyDown} tabIndex={0}>
-            <div className="game-button" onClick={() => dispatch(setOpenChoice(true))} style={{ display: openChoice ? 'none' : 'flex' }} ><p>Jouer</p></div>
+        <>
             {
-                openChoice ?
-                    <HeroChoice />
-                    : ''
+                windowWidth > 1350 ?
+                    <section className='game' onKeyDown={handleKeyDown} tabIndex={0}>
+                        <div className="game-button" onClick={() => dispatch(setOpenChoice(true))} style={{ display: openChoice ? 'none' : 'flex' }} ><p>Jouer</p></div>
+                        {
+                            openChoice ?
+                                <HeroChoice />
+                                : ''
+                        }
+                        {
+                            hero.name && !openChoice ?
+                                <GameHero top={top} bottom={bottom} right={right} left={left} />
+                                : ''
+                        }
+                    </section>
+                    : null
             }
-            {
-                hero.name && !openChoice ?
-                    <GameHero top={top} bottom={bottom} right={right} left={left} />
-                    : ''
-            }
-        </section>
+        </>
     );
 };
 
