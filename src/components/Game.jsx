@@ -5,15 +5,15 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setOpenChoice } from '../stores/HeroSlice';
 
 const Game = () => {
-    const [top, setTop] = useState(0);
+    const [top, setTop] = useState(50);
     const [bottom, setBottom] = useState(0);
-    const [left, setLeft] = useState(0);
+    const [left, setLeft] = useState(50);
     const [right, setRight] = useState(0);
     const hero = useSelector((state) => state.hero.hero)
     const openChoice = useSelector((state) => state.hero.open)
     const dispatch = useDispatch();
     const [windowWidth, setWindowWidth] = useState('');
-    
+
     useEffect(() => {
         setWindowWidth(window.innerWidth)
     }, [windowWidth])
@@ -40,9 +40,14 @@ const Game = () => {
     return (
         <>
             {
-                windowWidth > 1350 ?
+                windowWidth > 1150 ?
                     <section className='game' onKeyDown={handleKeyDown} tabIndex={0}>
-                        <div className="game-button" onClick={() => dispatch(setOpenChoice(true))} style={{ display: openChoice ? 'none' : 'flex' }} ><p>Jouer</p></div>
+                        {
+                            !hero.name ?
+                                <div className="game-button" onClick={() => window.innerWidth < 1150 ? alert('Votre taille d\'écran est trop petite, veuillez utiliser un écran de 1150px minimun !') : dispatch(setOpenChoice(true))} style={{ display: openChoice ? 'none' : 'flex' }} ><p>Jouer</p></div>
+                                : ''
+                        }
+
                         {
                             openChoice ?
                                 <HeroChoice />
