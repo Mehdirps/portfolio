@@ -4,6 +4,7 @@ import ArrayLengthSlice from "./ArrayLengthSlice";
 import ReadexSlice from "./ReadexSlice";
 import BallSlice from "./BallSlice";
 import DevCardSlice from "./DevCardSlice";
+import HeroSlice from "./HeroSlice";
 
 export const store = configureStore({
     reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
         length: ArrayLengthSlice,
         readex: ReadexSlice,
         ball: BallSlice,
-        devCard: DevCardSlice
+        devCard: DevCardSlice,
+        hero: HeroSlice
     }
 })
