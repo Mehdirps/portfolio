@@ -4,6 +4,18 @@ import { Icon } from '@iconify/react';
 const MusicPlayer = () => {
     const [open, setOpen] = useState(false);
 
+    const musicList = [
+        {
+            name: 'Musique 1',
+            src: './music/pokemon-1.mp3'
+        },
+        {
+            name: 'Musique 2',
+            src: './music/pokemon-2.mp3'
+        }
+    ]
+    const [music, setMusic] = useState(musicList[0]);
+
     const openPlayer = () => {
         if (open) {
             setOpen(false);
@@ -18,19 +30,19 @@ const MusicPlayer = () => {
                 open ?
                     <div className="music-container">
                         <div className="music">
-                            <p>Musique 1</p>
+                            <h3>{music.name}</h3>
                             <div className="container">
-                                <audio controls loop>
-                                    <source src="./music/pokemon-1.mp3" />
-                                </audio>
+                                <audio src={music.src} controls />
                             </div>
-                        </div>
-                        <div className="music2">
-                            <p>Musique 2</p>
-                            <div className="container">
-                                <audio controls loop>
-                                    <source src="./music/pokemon-2.mp3" />
-                                </audio>
+                            <div className="other-musics">
+                                <h4>Autres musiques</h4>
+                                {
+                                    musicList.map((otherMusic, id) =>
+                                        otherMusic.name !== music.name ?
+                                            <p key={id} onClick={() => setMusic(otherMusic)}>{otherMusic.name}</p>
+                                            : ''
+                                    )
+                                }
                             </div>
                         </div>
                     </div>
