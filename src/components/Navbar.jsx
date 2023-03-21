@@ -4,10 +4,11 @@ import { setReadex, setShowRealisation } from '../stores/ReadexSlice';
 import { setDevCard } from '../stores/DevCardSlice';
 import { setDisplay } from '../stores/BallSlice';
 import { setLanguage } from '../stores/LanguageSlice';
-
+import { setSkillsBag } from '../stores/SkillsBagSlice';
 const Navbar = () => {
     const readex = useSelector((state) => state.readex.openReadex)
     const devCard = useSelector((state) => state.devCard.openDevCard);
+    const skillsBag = useSelector((state) => state.skillsBag.open);
     const dispatch = useDispatch();
     const [height, setHeight] = useState(false);
 
@@ -26,6 +27,9 @@ const Navbar = () => {
         if (devCard === true) {
             dispatch(setDevCard(false))
         }
+        if (skillsBag) {
+            dispatch(setSkillsBag(false))
+        }
         setTimeout(() => {
             dispatch(setDisplay('ball-off'))
             dispatch(setReadex(true))
@@ -37,21 +41,43 @@ const Navbar = () => {
         if (devCard === false) {
             dispatch(setDisplay('ball'))
         }
-        if (devCard === true) {
+        if (devCard) {
             dispatch(setDevCard(false))
             return;
         }
-        if (readex === true) {
+        if (readex) {
             dispatch(setReadex(false))
             dispatch(setLanguage('tout'))
         }
-
+        if (skillsBag) {
+            dispatch(setSkillsBag(false))
+        }
         setTimeout(() => {
             dispatch(setDisplay('ball-off'))
             dispatch(setDevCard(true))
         }, 1000)
     }
+    const openSkillsBag = () => {
 
+        if (skillsBag === false) {
+            dispatch(setDisplay('ball'))
+        }
+        if (skillsBag) {
+            dispatch(setSkillsBag(false))
+            return;
+        }
+        if (readex) {
+            dispatch(setReadex(false))
+            dispatch(setLanguage('tout'))
+        }
+        if (devCard) {
+            dispatch(setDevCard(false))
+        }
+        setTimeout(() => {
+            dispatch(setDisplay('ball-off'))
+            dispatch(setSkillsBag(true))
+        }, 1000)
+    }
     const openMenu = () => {
         if (height === true) {
             setHeight(false);
@@ -76,7 +102,7 @@ const Navbar = () => {
                         </figure>
                         <p>Réadex</p>
                     </li>
-                    <li>
+                    <li onClick={openSkillsBag}>
                         <figure className='pokeball'>
                             <img src="./img/icons/pokeball.png" alt="Icon Pokéball" />
                         </figure>
