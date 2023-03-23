@@ -91,7 +91,7 @@ export const portfolioData = [
     id: 9,
     name: 'E-commerce SF6',
     languages: ['tout', 'php', 'symfony'],
-    languagesIcons: ['fab fa-php', 'fab fa-bootstrap'],
+    languagesIcons: ['fab fa-php', 'fab fa-bootstrap', 'fa-brands fa-symfony'],
     source: 'https://github.com/Mehdirps/E-commerce-Symfony6',
     info: 'Suite à mon apprentissage du POO, je souhaitais beaucoup apprendre le Frameworks PHP : Symfony. Utilisé par de nombreuses entreprises pour le web et afin de devenir Développeur FullStack, je me devais d\'apprendre à utiliser ce frameworks. En suivant un tuto youtube, j\'ai commencé à créer un site e-commerce (projet non terminé) basé sur Symfony et Twig',
     picture: './img/realisations/e-commerce-SF6.png',
