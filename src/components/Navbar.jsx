@@ -86,11 +86,11 @@ const Navbar = () => {
         setHeight(true);
     }
     useEffect(() => {
-        if (devCard || readex) {
+        if (devCard || readex || skillsBag) {
             setHeight(false);
             return;
         }
-    }, [devCard, readex])
+    }, [devCard, readex, skillsBag])
     return (
         <header className='header'>
             <p className='title' onClick={openMenu}>Menu principal</p>
