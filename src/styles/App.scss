@@ -15,3 +15,12 @@
 @import './components/realisationDetails';
 @import './components/devCard';
 @import './components/game';
+@import './components/skillsBag';
+
+.dev{
+    padding: 20px;
+    background-color: red;
+    font-size: 2rem;
+    color: white;
+    text-align: right;
+}
