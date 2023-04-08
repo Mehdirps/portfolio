@@ -35,15 +35,21 @@
         position: absolute;
         transition: all .5s linear;
         display: flex;
-        justify-content: space-between;
-        #personnage{
-            flex: 1;
+        justify-content: center;
+
+        #personnage {
             height: 100%;
+            width: unset !important;
         }
+
         img {
             align-self: baseline;
-            width: 33%;
             height: 50px;
+        }
+
+        #pokemon {
+            height: 50px;
+            width: 50px !important;
         }
     }
 
@@ -68,21 +74,44 @@
             font-family: $pocketMonk;
         }
 
-        .hero-selected {
+        // .hero-selected {
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+
+        //     img {
+        //         width: 50px;
+        //         height: 50px;
+        //     }
+
+        //     span {
+        //         text-transform: uppercase;
+        //         font-weight: bold;
+        //         font-family: $pokemonGB;
+        //         font-size: .8rem;
+        //     }
+        // }
+        .duo {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            height: 200px;
+            gap: 20px;
 
-            img {
-                width: 50px;
-                height: 50px;
-            }
+            .duo-img {
+                display: flex;
+                align-items: end;
+                gap: 20px;
 
-            span {
-                text-transform: uppercase;
-                font-weight: bold;
-                font-family: $pokemonGB;
-                font-size: .8rem;
+                img {
+                    width: 50px;
+                    height: 50px;
+
+                    &:nth-of-type(1) {
+                        width: unset;
+                        height: 140px;
+                    }
+                }
             }
         }
 
@@ -109,6 +138,14 @@
                         height: 100%;
                     }
                 }
+
+                .personnage-img {
+                    height: 200px;
+
+                    img {
+                        height: 100%;
+                    }
+                }
             }
 
             #choised {
@@ -120,13 +157,19 @@
             }
         }
 
-        .confirm {
+        .confirm,
+        .change-perso {
             padding: 10px;
             background-color: #eabd06;
             width: max-content;
             margin: auto;
             border-radius: 10px;
             cursor: pointer;
+        }
+        .change-perso{
+            background-color: unset;
+            border: 3px solid #eabd06;
+            background-color: white;
         }
     }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import GameHero from '../components/game/GameHero';
-import HeroChoice from './game/HeroChoice';
+import Choice from './game/Choice';
 import { useSelector, useDispatch } from 'react-redux';
 import { setOpenChoice } from '../stores/HeroSlice';
 
@@ -9,8 +9,9 @@ const Game = () => {
     const [bottom, setBottom] = useState(0);
     const [left, setLeft] = useState(50);
     const [right, setRight] = useState(0);
-    const hero = useSelector((state) => state.hero.hero)
-    const openChoice = useSelector((state) => state.hero.open)
+    const pokemon = useSelector((state) => state.hero.pokemon);
+    const personnage = useSelector((state) => state.hero.personnage);
+    const openChoice = useSelector((state) => state.hero.open);
     const dispatch = useDispatch();
     const [windowWidth, setWindowWidth] = useState('');
     const screenWidth = window.innerWidth; 
@@ -44,18 +45,18 @@ const Game = () => {
                 windowWidth > 1150 ?
                     <section className='game' onKeyDown={handleKeyDown} tabIndex={0}>
                         {
-                            !hero.name ?
+                            !pokemon.name ?
                                 <div className="game-button" onClick={() => window.innerWidth < 1150 ? alert('Votre taille d\'écran est trop petite, veuillez utiliser un écran de 1150px minimun !') : dispatch(setOpenChoice(true))} style={{ display: openChoice ? 'none' : 'flex' }} ><p>Jouer</p></div>
                                 : ''
                         }
 
                         {
                             openChoice ?
-                                <HeroChoice />
+                                <Choice />
                                 : ''
                         }
                         {
-                            hero.name && !openChoice ?
+                            personnage && pokemon.name && !openChoice ?
                                 <GameHero top={top} bottom={bottom} right={right} left={left} />
                                 : ''
                         }

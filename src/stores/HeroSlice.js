@@ -3,17 +3,21 @@ import { createSlice } from "@reduxjs/toolkit";
 const HeroSlice = createSlice({
     name: 'hero',
     initialState: {
-        hero: [],
+        pokemon: [],
+        personnage: "",
         open: false,
     },
     reducers: {
-        setHero: (state, action) => {
-            state.hero = action.payload
+        setPokemon: (state, action) => {
+            state.pokemon = action.payload
+        },
+        setPersonnage: (state, action) => {
+            state.personnage = action.payload
         },
         setOpenChoice: (state, action) => {
             state.open = action.payload
         }
     }
 });
-export const { setHero, setOpenChoice } = HeroSlice.actions;
+export const { setPokemon, setPersonnage, setOpenChoice } = HeroSlice.actions;
 export default HeroSlice.reducer;
