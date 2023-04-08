@@ -13,26 +13,27 @@ const Game = () => {
     const openChoice = useSelector((state) => state.hero.open)
     const dispatch = useDispatch();
     const [windowWidth, setWindowWidth] = useState('');
+    const screenWidth = window.innerWidth; 
 
     useEffect(() => {
-        setWindowWidth(window.innerWidth)
-    }, [windowWidth])
+        setWindowWidth(screenWidth)
+    }, [screenWidth])
 
     function handleKeyDown(event) {
         if (event.key === 'ArrowLeft') {
-            left <= 0 ? setLeft(0) :
+            left <= 10 ? setLeft(0) :
                 setLeft(left - 5)
         }
         if (event.key === 'ArrowRight') {
-            left >= 95 ? setRight(0) :
+            left >= 90 ? setRight(0) :
                 setLeft(left + 5)
         }
         if (event.key === 'ArrowDown') {
-            top >= 90 ? setBottom(0) :
+            top >= 80 ? setBottom(0) :
                 setTop(top + 5)
         }
         if (event.key === 'ArrowUp') {
-            top <= 0 ? setTop(0) :
+            top <= 10 ? setTop(0) :
                 setTop(top - 5)
         }
     }
