@@ -7,10 +7,10 @@ const Dialogue = () => {
     const navigate = useNavigate();
 
     const dialogueMessage = [
-        "  Bonjour ! Je m’appelle Mehdi Raposo Développeur FullStack Web Et Mobile, passionné d'informatique depuis petit, en 2021 j'ai effectuer un titre professionnel RNCP bac +2 Designer Web qui m'a appris les bases du développement web en HTML - CSS - Javascript et PHP.",
-        " Suite à ma formation Designer Web, j'ai continuer mon apprentissage dans le domaine en commençant une formation de Concepteur Développeur d’applications - bac +3 en alternance chez Online Campus.",
+        "  Bonjour ! Je m’appelle Mehdi Raposo Développeur FullStack Javascript sur une stack MERN, passionné d'informatique depuis petit, j'ai en 2021 effectuer un titre professionnel RNCP bac +2 Designer Web qui m'a appris les bases du développement web en HTML - CSS - Javascript et PHP.",
+        " Suite à ma formation Designer Web, j'ai continuer mon apprentissage dans le domaine en commençant une formation Titre Professionnel RNCP bac +3/4 - Développeur Web FullStack  en alternance chez Cloud Campus.",
         " Dans le cadre de ma formation en alternance, je recherche actuellement une entreprise dans le domaine du développement web ou mobile dans l’Yonne, l’Ile-de-France ou en 100% télétravail pour poursuivre mon apprentissage.",
-        " J'ai pour objectif de formation de créer une application de type forum pour discuter sur ses séries et films favoris. Je développe cette application avec une stack MERN - MongoDB, Express, React.js et Node.js",
+        " Cette formation à pour but de me perfectionner sur des languages comme le javascript avec ses frameworks React.js et Node.js, l'approfondissement de PHP avec son framework Symfony. Durant cette formation, je vais également apprendre la gestion de projet, et autres",
         " Si vous souhaitez en apprendre plus sur moi, mes compétences ou mes réalisations, je vous invite à cliquez sur le bouton ci-dessous pour suivre mon aventure !"
     ]
     // TODO Ajouter toutes les phrases nécéssaires
