@@ -1,11 +1,12 @@
 import React from 'react';
 import { setLanguage } from '../../stores/LanguageSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const SortRealisations = () => {
     const dispatch = useDispatch();
+    const language = useSelector((state) => state.language.value)
     return (
-        <select name="" id="" onChange={(e) => dispatch(setLanguage(e.target.value))}>
+        <select name="" id="" onChange={(e) => dispatch(setLanguage(e.target.value))} defaultValue={language}>
             <option value="tout">Tout</option>
             <option value="react.js">React.js</option>
             <option value="node.js">Node.js</option>
