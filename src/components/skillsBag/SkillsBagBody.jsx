@@ -12,18 +12,18 @@ const SkillsBagBody = (props) => {
     const handleSkillDetails = (skill) => {
         dispatch(setSkill(skill));
     }
-    console.log(skill)
+
     return (
         <section className="skillsBag-body">
             <section className="skills-container">
                 {
-                    skills.map((skill, id) =>
-                        skill.category === skillCategory ?
-                            <div className="skill" key={id} onClick={() => handleSkillDetails(skill)}>
+                    skills.map((item, id) =>
+                        item.category === skillCategory ?
+                            <div className="skill" id={item.name === skill.name ? 'skill-active' : ''} key={id} onClick={() => handleSkillDetails(item)}>
                                 <figure>
-                                    <img src={skill.icon} alt="" />
+                                    <img src={item.icon} alt="" />
                                 </figure>
-                                <p>{skill.name}</p>
+                                <p>{item.name}</p>
                             </div>
                             : null
                     )

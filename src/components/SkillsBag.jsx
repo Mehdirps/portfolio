@@ -1,11 +1,14 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import SkillsBagHeader from './skillsBag/SkillsBagHeader';
 import SkillsBagBody from './skillsBag/SkillsBagBody';
+import { setSkillsBag, setSkill } from '../stores/SkillsBagSlice';
 
 const SkillsBag = () => {
     const open = useSelector((state) => state.skillsBag.open)
-
+    const category = useSelector((state) => state.skillsBag.category)
+    const skill = useSelector((state) => state.skillsBag.skill)
+    const dispatch = useDispatch();
     const skillsList = [
         {
             'name': 'HTML',
@@ -165,6 +168,11 @@ const SkillsBag = () => {
         },
     ]
 
+    useEffect(() => {
+        if(category !== skill.category){
+            dispatch(setSkill(''))
+        }
+    })
     return (
         <>
             {
@@ -172,6 +180,10 @@ const SkillsBag = () => {
                     <section className='skills-bag'>
                         <SkillsBagHeader SkillsNumber={skillsList.length} />
                         <SkillsBagBody skills={skillsList} />
+                        <div className="close-button" onClick={() => dispatch(setSkillsBag(false))}>
+                            <img src="./img/icons/close-button.png" alt="bouton fermer" />
+                            <p>Fermer</p>
+                        </div>
                     </section>
                     : ''
             }
