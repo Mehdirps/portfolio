@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCategory } from '../../stores/SkillsBagSlice';
 
-const SkillsBagHeader = () => {
+const SkillsBagHeader = (props) => {
     const category = useSelector((state) => state.skillsBag.category)
     const dispatch = useDispatch();
 
@@ -27,6 +27,7 @@ const SkillsBagHeader = () => {
                     <img src="./img/icons/skills/gestion.png" alt="icon gestion" category="gestion" onClick={(e) => handleCategory(e)} />
                 </div>
             </div>
+            <p className='skills-numer'>{props.SkillsNumber} Skills</p>
         </section>
     );
 };
