@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSkill } from '../../stores/SkillsBagSlice';
 
@@ -12,6 +12,10 @@ const SkillsBagBody = (props) => {
     const handleSkillDetails = (skill) => {
         dispatch(setSkill(skill));
     }
+
+    // useEffect(() => {
+    //     dispatch(setSkill(skills[0]))
+    // }, [skills, dispatch])
 
     return (
         <section className="skillsBag-body">
@@ -33,6 +37,7 @@ const SkillsBagBody = (props) => {
                 <h3>{skill.name}</h3>
                 <p>{skill.started_date}</p>
                 <p>{skill.category}</p>
+                <p>{skill.level}</p>
             </section>
         </section>
     );

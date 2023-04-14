@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 const Layout = () => {
     return (
         <>
-        <p className='dev'>&#x26A0; En cours de développement !</p>
+        {/* <p className='dev'>&#x26A0; En cours de développement !</p> */}
             <Navbar />
             <Outlet />
         </>

@@ -13,15 +13,16 @@ const index = () => {
         <HashRouter>
             <Routes>
                 <Route element={<MusicLayout />}>
-                    <Route element={<AppLayout />}>
-                        <Route index element={<Welcome />} />
-                        <Route path='/presentation' element={<Dialogue />} />
-                        <Route path='/test' element={<Test />} />
-                        <Route element={<Layout />}>
-                            <Route path='/accueil' element={<Home />} />
-                        </Route>
-                        <Route path='*' element={<Welcome />} />
+                    {/* TODO Reactiver loader */}
+                    {/* <Route element={<AppLayout />}> */}
+                    <Route index element={<Welcome />} />
+                    <Route path='/presentation' element={<Dialogue />} />
+                    <Route path='/test' element={<Test />} />
+                    <Route element={<Layout />}>
+                        <Route path='/accueil' element={<Home />} />
                     </Route>
+                    <Route path='*' element={<Welcome />} />
+                    {/* </Route> */}
                 </Route>
             </Routes>
         </HashRouter>
