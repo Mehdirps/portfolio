@@ -75,7 +75,8 @@
                 #react,
                 #vue,
                 #wordpress,
-                #symfony {
+                #symfony,
+                #react-native {
                     padding: 5px;
                     border-radius: 10px;
                     color: white;
@@ -102,7 +103,8 @@
                     background-color: #7bc326;
                 }
 
-                #react {
+                #react,
+                #react-native {
                     background-color: #5ccfee;
                 }
 
@@ -140,6 +142,9 @@
                         margin: 0 10px 0 0;
                         float: right;
 
+                    }
+                    @media screen and (min-width:999px) {
+                        height: 200px;
                     }
 
                     &:before,

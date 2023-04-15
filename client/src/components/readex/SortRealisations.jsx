@@ -9,6 +9,7 @@ const SortRealisations = () => {
         <select name="" id="" onChange={(e) => dispatch(setLanguage(e.target.value))} defaultValue={language}>
             <option value="tout">Tout</option>
             <option value="react.js">React.js</option>
+            <option value="react-native">React Native</option>
             <option value="node.js">Node.js</option>
             <option value="css">CSS</option>
             <option value="javascript">JavaScript</option>
