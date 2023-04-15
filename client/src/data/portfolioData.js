@@ -131,4 +131,14 @@ export const portfolioData = [
     realisationDuration: "En cours",
     link: 'https://foxinema.fr'
   },
+  {
+    id: 13,
+    name: 'NTF Mobile App',
+    languages: ['tout', 'javascript', 'react-native'],
+    languagesIcons: ['fab fa-js', 'fab fa-react'],
+    source: 'https://github.com/Mehdirps/NFT-React-Native',
+    info: 'En suivant un tuto sur youtube pour découvrir le React Native, j\'ai développé une petite application fictive qui présente des NTF et qui permet de placer des offres (non fonctionnel)',
+    picture: './img/realisations/nft.png',
+    link: ''
+  },
 ]
