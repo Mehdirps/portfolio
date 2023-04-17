@@ -37,6 +37,6 @@ const RealisationSchema = new mongoose.Schema(
     }
 );
 
-const RealisationModel = mongoose.model('realisation', RealisationSchema);
+const RealisationModel = mongoose.model('realisations', RealisationSchema);
 
 module.exports = RealisationModel;
