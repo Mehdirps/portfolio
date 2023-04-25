@@ -3,10 +3,10 @@
     max-width: 1000px;
     padding-bottom: 3vh;
     background-color: white;
-    border-radius: 50px;
+    border-radius: 20px;
     font-family: $roboto;
     border: 1px solid black;
-    border-top: unset;
+    // border-top: unset;
     animation: open linear .5s;
     z-index: 5;
     overflow: hidden;
