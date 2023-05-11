@@ -6,6 +6,7 @@ import BallSlice from "./BallSlice";
 import DevCardSlice from "./DevCardSlice";
 import HeroSlice from "./HeroSlice";
 import SkillsBagSlice from "./SkillsBagSlice";
+import ExpTeamSlice from "./ExpTeamSlice";
 
 export const store = configureStore({
     reducer: {
@@ -16,5 +17,6 @@ export const store = configureStore({
         devCard: DevCardSlice,
         hero: HeroSlice,
         skillsBag: SkillsBagSlice,
+        expTeam: ExpTeamSlice,
     }
 })
