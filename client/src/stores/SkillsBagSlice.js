@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const SkillsBagSlice = createSlice({
     name: 'skillsBag',
     initialState: {
-        open: true,
+        open: false,
         category: 'front-end',
         skillsList: [],
         skill: [],
