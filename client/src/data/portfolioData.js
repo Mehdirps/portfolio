@@ -148,7 +148,7 @@ export const ExpericesPro = [
     id: 1,
     entreprise: 'CMBM',
     poste: 'Technicien de maintenance informatique',
-    date: '05/2018 -> 07/2018',
+    date: '05.2018 / 07.2018',
     logo: './img/logo-entreprises/cmbm.png',
     desc: 'Stage réalisé afin de découvrir le métier de Technicien d\'assistance en informatique qui me plaisait beaucoup, durant se stage j\'ai réaliser différentes missions tels que des scans virus, installation d\'OS ou de logiciels/programme, et petites mainteances(dépoussierage etc..).'
   },
@@ -156,7 +156,7 @@ export const ExpericesPro = [
     id: 2,
     entreprise: 'Carrefour',
     poste: 'Vendeur multimedia',
-    date: '05/2021 -> 06/2021',
+    date: '05.2021 / 06.2021',
     logo: './img/logo-entreprises/carrefour.png',
     desc: 'Durant mon parcours au DAQ 2.0 au Greta j\'ai réaliser un stage dans l\'enseigne de SuperMarché Carrefour dans le rayon informatique/multimédia, j\'ai pendant se stage appris la relation/conseil client, le gestion de stock, la mise en avant de produits (ex: offres promotionnelles). Ce stage ma permis de découvrir la vente tout en restant dans le domaine de l\'informatique.'
   },
@@ -164,7 +164,7 @@ export const ExpericesPro = [
     id: 3,
     entreprise: 'Vap\'In Love',
     poste: 'Designer Web - Développeur Wordpress',
-    date: '01/2022 -> 03/2022',
+    date: '01.2022 / 03.2022',
     logo: './img/logo-entreprises/vapinlove.png',
     desc: 'Afin de valider mon Titre Professionnel Designer Web, je devais effectuer un stage en milieu professionnel afin de découvrir le métier en dehors d\'un cadre de formation. J\'ai donc effectuer un stage dans une boutique de vente de cigarettes éléctroniques qui possédait une site internet très vieux et de moins en moins fonctionnel. J\'ai du créér une maquette grapique pour présenter le potentiel nouveau site puis après validation de la maquette par mon tuteur j\'ai développeur le site avec Wordpress et Elementor !'
   },
@@ -172,7 +172,7 @@ export const ExpericesPro = [
     id: 4,
     entreprise: 'Proxilog - Stage',
     poste: 'Développeur PHP',
-    date: '03/2022 -> 03/2022',
+    date: '03.2022 / 03.2022',
     logo: './img/logo-entreprises/proxilog.png',
     desc: 'Afin de débutant une nouvelle formation TP Concepteur Développeur d\'Applications en alternance je devais trouver une entreprise, après avec effectuer une candidature spontanée à l\'Agence Web Proxilog. Le gérant m\'a ensuite proposé d\'éffectuer une stage d\'immersion pour découvrir le fonctionnement de l\'entreprise et qu\'ils puissent déterminer mon niveau. J\'ai donc développer le back-office d\'un site avec PHP natif.'
   },
@@ -180,7 +180,7 @@ export const ExpericesPro = [
     id: 5,
     entreprise: 'Proxilog - Alternance',
     poste: 'Développeur Symfony',
-    date: '06/2022 -> 10/2022',
+    date: '06.2022 / 10.2022',
     logo: './img/logo-entreprises/proxilog.png',
     desc: 'Après mon immersion chez Proxilog, j\'ai débuter ma formation en alternance chez eux où j\'ai pu travailler à la création de back-offices avec un CMS maison créer pour leur développeur basé sur Symfony. Je n\'ai pas pu finir mon alternance chez eux pour des soucis interne.'
   },
@@ -190,7 +190,7 @@ export const ExpericesSco = [
     id: 1,
     entreprise: 'DAQ 2.0 - Greta',
     poste: 'Stagiaire de la formation profesionnelle',
-    date: '03/2021 -> 06/2021',
+    date: '03.2021 / 06.2021',
     logo: './img/logo-entreprises/greta.png',
     desc: 'Formation de remise à nouveau et de préparation de projet professionnel, cela m\'a permi de travailler sur mon projet de formation, de me remettre à niveau francais, math et anglais et m\'a aussi permi de faire des stages afin de valider mon projet professionnel et de découvrir le domaine de l\'informatique.'
   },
@@ -198,7 +198,7 @@ export const ExpericesSco = [
     id: 2,
     entreprise: 'OnlineFormaPro',
     poste: 'TP Bac+2 Designer',
-    date: '07/2021 -> 03/2022',
+    date: '07.2021 / 03.2022',
     logo: './img/logo-entreprises/onlineformapro.svg',
     desc: 'Cette formation m\' permi de développé mes premières compétences dans le développement web et le design. Durant cette formation j\'ai pu apprendre le deveement en HTML, CSS, Javscript, PHP, Wordpress et design avec Figma, PhotoShop et illustrator.'
   },
@@ -206,7 +206,7 @@ export const ExpericesSco = [
     id: 3,
     entreprise: 'Online Campus',
     poste: 'TP Bac+3 Concepteur Développeur d\'Applications',
-    date: '06/2022 -> 02/2023',
+    date: '06.2022 / 02.2023',
     logo: './img/logo-entreprises/onlineformapro.svg',
     desc: 'Après ma formation Designer Web, j\'ai voulu continuer mon apprentissage du développement web en commencant la formation CDA. Durant cette formation nous devions choisir le language que nous voulions apprendre, nous avions presque tous choisis des languages différents. J\'ai choisi d\'apprendre la Stack Javascript MERN (MongoDB- Express - React.js - Node.js). Pour cela j\'ai commencé à développement une application de type forum afin de discuter sur nos films et séries préférés (Toujours en cours de développement par manque de temps). Formation non terminé suite à la rupture du contrat avec mon entreprise d\'accueil.'
   },
@@ -214,7 +214,7 @@ export const ExpericesSco = [
     id: 4,
     entreprise: 'Cloud Campus',
     poste: 'TP Bac+3/4 Développeur Web FullStack',
-    date: '03/2023 -> 03/2025',
+    date: '03.2023 / 03.2025',
     logo: './img/logo-entreprises/cloudcampus.png',
     desc: 'Suite à ma précédente formation que je n\'ai pas terminer j\'ai rejoint l\'école Cloud Campus pour une TP Développeur Web FullStack dans laquelle je vais continer à apprendre la Stack MERN et Symfony. Cette formation dure 2 ans, la première année est basée sur le développement front-end avec HTML, CSS, JavaScript et React.js et la deuxième année sur le back-end avec PHP, POO, Symfony et Node.js avec Express et MongoDB'
   },
