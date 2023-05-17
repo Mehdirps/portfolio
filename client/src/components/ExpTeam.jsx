@@ -34,8 +34,10 @@ const ExpTeam = () => {
                                 }} className={expCat === 'education' ? 'selected' : null}>Formation</p>
                             </div>
                         </section>
-                        <ExpList />
-                        <ExpDetails />
+                        <section className="expTeam-container">
+                            <ExpList />
+                            <ExpDetails />
+                        </section>
                     </section>
                     : null
             }
