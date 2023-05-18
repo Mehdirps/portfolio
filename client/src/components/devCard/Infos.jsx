@@ -31,7 +31,7 @@ const Infos = () => {
                 </div>
             </div>
             <div className="realisation-number">
-                <p>N° de projet</p>
+                <p>Nb  de projet</p>
                 <p>{portfolioData.length}</p>
             </div>
             <div className="starting-date">
