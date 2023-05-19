@@ -6,7 +6,7 @@ import { setExp } from '../../stores/ExpTeamSlice';
 const ExpList = () => {
     const expList = useSelector((state) => state.expTeam.list);
     const listLength = useSelector((state) => state.expTeam.listLength);
-    console.log(listLength);
+
     let emptyExp = useMemo(() => [], []);
     const dispatch = useDispatch();
 
