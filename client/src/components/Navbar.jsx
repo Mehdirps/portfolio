@@ -5,10 +5,13 @@ import { setDevCard } from '../stores/DevCardSlice';
 import { setDisplay } from '../stores/BallSlice';
 import { setLanguage } from '../stores/LanguageSlice';
 import { setSkillsBag } from '../stores/SkillsBagSlice';
+import { setExpTeam } from '../stores/ExpTeamSlice';
+
 const Navbar = () => {
     const readex = useSelector((state) => state.readex.openReadex)
     const devCard = useSelector((state) => state.devCard.openDevCard);
     const skillsBag = useSelector((state) => state.skillsBag.open);
+    const expTeam = useSelector((state) => state.expTeam.open);
     const dispatch = useDispatch();
     const [height, setHeight] = useState(false);
 
@@ -29,6 +32,9 @@ const Navbar = () => {
         }
         if (skillsBag) {
             dispatch(setSkillsBag(false))
+        }
+        if (expTeam) {
+            dispatch(setExpTeam(false))
         }
         setTimeout(() => {
             dispatch(setDisplay('ball-off'))
@@ -52,6 +58,9 @@ const Navbar = () => {
         if (skillsBag) {
             dispatch(setSkillsBag(false))
         }
+        if (expTeam) {
+            dispatch(setExpTeam(false))
+        }
         setTimeout(() => {
             dispatch(setDisplay('ball-off'))
             dispatch(setDevCard(true))
@@ -73,9 +82,36 @@ const Navbar = () => {
         if (devCard) {
             dispatch(setDevCard(false))
         }
+        if (expTeam) {
+            dispatch(setExpTeam(false))
+        }
         setTimeout(() => {
             dispatch(setDisplay('ball-off'))
             dispatch(setSkillsBag(true))
+        }, 1000)
+    }
+    const openExpTeam = () => {
+
+        if (expTeam === false) {
+            dispatch(setDisplay('ball'))
+        }
+        if (expTeam) {
+            dispatch(setExpTeam(false))
+            return;
+        }
+        if (readex) {
+            dispatch(setReadex(false))
+            dispatch(setLanguage('tout'))
+        }
+        if (devCard) {
+            dispatch(setDevCard(false))
+        }
+        if (skillsBag) {
+            dispatch(setSkillsBag(false))
+        }
+        setTimeout(() => {
+            dispatch(setDisplay('ball-off'))
+            dispatch(setExpTeam(true))
         }, 1000)
     }
     const openMenu = () => {
@@ -86,11 +122,12 @@ const Navbar = () => {
         setHeight(true);
     }
     useEffect(() => {
-        if (devCard || readex || skillsBag) {
+        if (devCard || readex || skillsBag || expTeam) {
             setHeight(false);
             return;
         }
-    }, [devCard, readex, skillsBag])
+    }, [devCard, readex, skillsBag, expTeam]);
+
     return (
         <header className='header'>
             <p className='title' onClick={openMenu}>Menu principal</p>
@@ -114,7 +151,7 @@ const Navbar = () => {
                         </figure>
                         <p>Profil</p>
                     </li>
-                    <li>
+                    <li onClick={openExpTeam}>
                         <figure className='cv'>
                             <img src="./img/icons/cv.png" alt="Icon C.V" />
                         </figure>
