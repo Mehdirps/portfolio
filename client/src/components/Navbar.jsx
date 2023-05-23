@@ -141,9 +141,9 @@ const Navbar = () => {
                     </li>
                     <li onClick={openSkillsBag}>
                         <figure className='pokeball'>
-                            <img src="./img/icons/pokeball.png" alt="Icon Pokéball" />
+                            <img src="./img/icons/skillbag.png" alt="Icon Pokéball" />
                         </figure>
-                        <p>Skills</p>
+                        <p>Skills Bag</p>
                     </li>
                     <li onClick={openDevCard}>
                         <figure className='dresseur'>
@@ -153,9 +153,9 @@ const Navbar = () => {
                     </li>
                     <li onClick={openExpTeam}>
                         <figure className='cv'>
-                            <img src="./img/icons/cv.png" alt="Icon C.V" />
+                            <img src="./img/icons/pokeball.png" alt="Icon C.V" />
                         </figure>
-                        <p>C.V</p>
+                        <p>Exp Team</p>
                     </li>
                 </ul>
             </nav>
