@@ -3,7 +3,8 @@ import Ball from '../components/Ball';
 import DevCard from '../components/DevCard';
 import Game from '../components/Game';
 import Readex from '../components/Readex';
-import SkillsBag from '../components/SkillsBag';
+import SkillsBag from '../components/SkillsBag'
+import ExpTeam from '../components/ExpTeam';
 
 const Home = () => {
     return (
@@ -12,7 +13,8 @@ const Home = () => {
             <DevCard />
             <SkillsBag />
             <Ball />
-            <Game />
+            <ExpTeam />
+            {/* <Game /> */}
         </section >
     );
 };
