@@ -1,6 +1,6 @@
 .expTeam {
     width: 90%;
-    max-width: 800px;
+    max-width: 400px;
     // max-height: 70vh;
     border-radius: 10px;
     font-family: $roboto;
@@ -10,6 +10,10 @@
     background: url('../../assets/img/backgroud-exp.png') center no-repeat;
     padding: 10px;
     position: relative;
+
+    @media screen and (min-width: 799px) {
+        max-width: 800px;
+    }
 
     .expTeam-header {
 
@@ -37,6 +41,8 @@
             h2 {
                 text-transform: uppercase;
                 font-size: 1.5rem;
+                text-shadow: 1px 1px 1px white,
+                    1px 1px 1px white;
 
                 @media screen and (min-width:799px) {
                     font-size: 2.5rem;
@@ -167,6 +173,7 @@
         .exp-details {
             display: none;
             grid-column: 3/4;
+            align-self: flex-start;
 
             @media screen and (min-width:799px) {
                 display: flex;
@@ -180,6 +187,10 @@
                 img {
                     width: 100%;
                 }
+            }
+
+            h3 {
+                margin: 10px 0 10px 0;
             }
 
             p {
