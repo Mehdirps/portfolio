@@ -4,7 +4,7 @@ import { ExpericesPro } from '../data/portfolioData';
 const ExpTeamSlice = createSlice({
     name: 'ExpTeam',
     initialState: {
-        open: true,
+        open: false,
         category: 'pro',
         list: ExpericesPro,
         listLength: ExpericesPro.length,
