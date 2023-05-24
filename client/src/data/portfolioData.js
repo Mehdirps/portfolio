@@ -214,7 +214,7 @@ export const ExpericesSco = [
     id: 4,
     entreprise: 'Cloud Campus',
     poste: 'TP Bac+3/4 Développeur Web FullStack',
-    date: '03.2023 / 03.2025',
+    date: '02.2023 / 03.2025',
     logo: './img/logo-entreprises/cloudcampus.png',
     desc: 'Suite à ma précédente formation que je n\'ai pas terminer j\'ai rejoint l\'école Cloud Campus pour une TP Développeur Web FullStack dans laquelle je vais continer à apprendre la Stack MERN et Symfony. Cette formation dure 2 ans, la première année est basée sur le développement front-end avec HTML, CSS, JavaScript et React.js et la deuxième année sur le back-end avec PHP, POO, Symfony et Node.js avec Express et MongoDB'
   },
