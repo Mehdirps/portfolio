@@ -16,7 +16,7 @@ const TopReadexHeader = () => {
     }
     return (
         <div className="top">
-            <p>Readex</p>
+            <h2>Readex</h2>
             <figure className='icon'>
                 <img src="./img/icons/pokedex.png" alt="Icon Pokédex" />
             </figure>
