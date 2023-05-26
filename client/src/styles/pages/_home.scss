@@ -34,20 +34,25 @@
                 font-size: 1rem;
                 max-width: 270px;
                 margin: auto;
-
+                display: flex;
+                flex-direction: column;
+                
                 @media screen and (min-width: 1199px) {
                     max-width: 375px;
-                }
-
-                img {
-                    float: right;
-                    width: 20px;
-                    height: 20px;
-                }
-
-                @media screen and (min-width: 1199px) {
                     font-size: 1.5rem;
                 }
+
+                .role {
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        float: right;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
             }
         }
     }
