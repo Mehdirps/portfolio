@@ -1,89 +1,93 @@
-.welcome-page {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+a {
+    text-align: center;
+    color: black;
+    text-decoration: none;
 
-    .container {
+    .welcome-page {
+        position: relative;
+        height: 100vh;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        justify-content: center;
+        align-items: center;
 
-        .container-img {
 
-            .title {
-                width: 250px;
-                margin: auto;
-
-                @media screen and (min-width:500px) {
-                    width: 350px;
-                }
-
-                @media screen and (min-width:1000px) {
-                    width: 550px;
-                }
-
-                @media screen and (min-width:1500px) {
-                    width: 750px;
-                }
-
-                img {
-                    width: 100%;
-                }
-            }
-
-            .logo {
-                width: 70px;
-                margin: auto;
-
-                @media screen and (min-width:500px) {
-                    width: 90px;
-                }
-
-                @media screen and (min-width:1000px) {
-                    width: 110px;
-                }
-
-                @media screen and (min-width:1500px) {
-                    width: 140px;
-                }
-
-                img {
-                    width: 100%;
-                }
-            }
+        &:visited {
+            color: black;
         }
 
-        .next,
-        .copyright {
-            font-family: $pokemonGB;
-        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
 
-        @keyframes opacity {
-            0% {
-                opacity: 0;
-            }
+            .container-img {
 
-            50% {
-                opacity: 1;
-            }
+                .title {
+                    width: 250px;
+                    margin: auto;
 
-            100% {
-                opacity: 0;
-            }
-        }
+                    @media screen and (min-width:500px) {
+                        width: 350px;
+                    }
 
-        .next {
-            a {
-                color: black;
-                text-decoration: none;
+                    @media screen and (min-width:1000px) {
+                        width: 550px;
+                    }
 
-                &:visited {
-                    color: black;
+                    @media screen and (min-width:1500px) {
+                        width: 750px;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
                 }
+
+                .logo {
+                    width: 70px;
+                    margin: auto;
+
+                    @media screen and (min-width:500px) {
+                        width: 90px;
+                    }
+
+                    @media screen and (min-width:1000px) {
+                        width: 110px;
+                    }
+
+                    @media screen and (min-width:1500px) {
+                        width: 140px;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .next,
+            .copyright {
+                font-family: $pokemonGB;
+            }
+
+            @keyframes opacity {
+                0% {
+                    opacity: 0;
+                }
+
+                50% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            .next {
+
 
                 p {
                     width: 100%;
