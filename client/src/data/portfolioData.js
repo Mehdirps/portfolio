@@ -118,7 +118,7 @@ export const portfolioData = [
     info: 'Pour mon apprentissage de React.js j\'ai développement un c.v en ligne contenant mes compétences, réalisations et autres informations me concernant. Ce c.v en ligne à éte mon premier projet utilisant le framework JavaScript React.js et ce fut un coup de coeur !',
     picture: './img/realisations/c.v.png',
     realisationDuration: "1 semaine",
-    link: 'https://rpsdevdesign.fr'
+    link: 'https://cv.rpsdevdesign.fr'
   },
   {
     id: 12,
