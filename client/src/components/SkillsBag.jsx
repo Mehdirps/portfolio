@@ -207,7 +207,7 @@ const SkillsBag = () => {
                         <SkillsBagHeader SkillsNumber={skillsList.length} />
                         <SkillsBagBody skills={skillsList} />
                         <div className="close-button" onClick={() => dispatch(setSkillsBag(false))}>
-                            <img src="./img/icons/close-button.png" alt="bouton fermer" />
+                            <img src="./img/icons/close-button-white.png" alt="bouton fermer" />
                             <p>Fermer</p>
                         </div>
                     </section>
