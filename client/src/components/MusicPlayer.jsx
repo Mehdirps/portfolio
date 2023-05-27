@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Icon } from '@iconify/react';
+import { useSelector } from 'react-redux';
 
 const MusicPlayer = () => {
+    const readex = useSelector((state) => state.readex.openReadex);
+    const devCard = useSelector((state) => state.devCard.openDevCard);
+    const expTeam = useSelector((state) => state.expTeam.open);
+    const skillBag = useSelector((state) => state.skillsBag.open);
+    const ballDisplay = useSelector((state) => state.ball.display)
     const [open, setOpen] = useState(false);
 
     const musicList = [
@@ -23,6 +29,12 @@ const MusicPlayer = () => {
         }
         setOpen(true);
     }
+
+    useEffect(() => {
+        if (readex || devCard || expTeam || skillBag || ballDisplay !== 'ball-off') {
+            setOpen(false)
+        }
+    }, [ballDisplay, devCard, expTeam, readex, skillBag])
     return (
         <section className="music-player">
             <Icon icon="material-symbols:music-video" className='icon' onClick={openPlayer} />
