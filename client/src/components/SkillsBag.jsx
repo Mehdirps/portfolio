@@ -102,6 +102,13 @@ const SkillsBag = () => {
             'level': 'Niveau moyen'
         },
         {
+            'name': 'Laravel',
+            'icon': './img/icons/skills/back/laravel.png',
+            'started_date': '07/2023',
+            'category': 'back-end',
+            'level': 'Niveau moyen'
+        },
+        {
             'name': 'MySql',
             'icon': './img/icons/skills/back/mysql.png',
             'started_date': '09/2021',

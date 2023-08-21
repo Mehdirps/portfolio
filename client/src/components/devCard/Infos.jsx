@@ -46,6 +46,10 @@ const Infos = () => {
                 <p>En cours</p>
                 <p>TP Développeur Web FullStack bac +4</p>
             </div>
+            <div className="formation">
+                <p>Entreprise</p>
+                <p>MaPlaqueNFC</p>
+            </div>
         </div>
     );
 };
